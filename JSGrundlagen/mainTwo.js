@@ -49,6 +49,9 @@ el.addEventListener('click', function () {
 //     console.log('Mein geklickt')
 // });
 
+var newElement = document.createElement('p');
+newElement.innerHTML = 'Meine Nachricht';
+document.querySelector('body').appendChild(newElement);
 
 //Async
 waitForSth();
