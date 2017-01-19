@@ -14,7 +14,10 @@ document.getElementById('check').addEventListener('click', function () {
         names.push({
             name: name,
             password: password
-        })
+        });
+        console.info('Benutzer konnte dem Array hinzugefügt werden!');
+    } else {
+        console.warn('Benutzer ist schon vorhanden!')
     }
     console.log(names)
 });
