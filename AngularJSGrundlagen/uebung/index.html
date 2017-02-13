@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login With Angular</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="../script/angular.min.js"></script>
+    </head>
+    <body ng-app="myLoginApp">
+        <div ng-controller="loginCtrl">
+            <div>
+                <label for="name">
+                    <input type="text" id="name" placeholder="name" ng-model="username">
+                </label>
+                <label for="password">
+                    <input type="password" id="password" ng-model="password">
+                </label>
+                <button ng-click="doCheck()">Anlegen</button>
+
+                <p>{{ausgabe}}</p>
+
+                <div class="checkbox">
+                    <label><input type="checkbox" ng-model="showUsers" ng-change="doShowUsers()">Bisherige Benutzer anzeigen</label>
+                </div>
+            </div>
+
+            <div ng-show="showUsers">
+                Bisher vorhandene Benutzer:
+                <ul>
+                    <li ng-repeat="user in users">{{user.name}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Our main script file -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

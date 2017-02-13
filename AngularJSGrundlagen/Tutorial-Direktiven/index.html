@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Tutorial - Direktiven</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script src="../script/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl" ng-init="{{firstName}}">
+
+<p><b>Input something in the input box:</b></p>
+<p>Name: <input type="text" ng-model="firstName"></p>
+<p>You wrote: {{ firstName }}</p><br>
+
+<p><b>Looping with ng-repeat:</b></p>
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+
+</body>
+</html> 
